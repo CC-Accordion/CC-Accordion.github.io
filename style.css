@@ -1,0 +1,127 @@
+/* COLOR SCHEME
+#E7F2F8
+#5B443E
+#4C2C2E
+*/
+
+body {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    min-height: 95vh;
+    background-image: url(bgd1.jpg);
+    background-color: #FFF2CC;
+    color: #F4B183;
+}
+
+/* Fonts */
+
+h1{
+    font-family: "Bitter", serif; 
+    font-size: 35px; font-style: normal; font-variant: normal; font-weight: 900; 
+    line-height: 26.4px; text-align: center;
+}
+p{
+    font-family: "Bitter", serif; 
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; 
+    line-height: 20px; text-align: center;
+}
+blockquote{
+    font-family: "Bitter", serif; 
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; 
+    line-height: 30px; text-align: center;
+}
+.description{
+    font-family: "Bitter", serif; 
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; 
+    line-height: 20px; text-align: center;
+}
+.subject{
+    font-family: "Bitter", serif; 
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; 
+    line-height: 30px; text-align: center;
+}
+
+/* Contents */
+
+.title {
+    background-color: #5B443E;
+    color: #fff;
+    margin: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.box {
+    background-color: #5B443E;
+    color: #fff;
+    margin: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.accord {
+    font-family: "Bitter", serif; 
+    width: 800px;
+    margin: 25px auto;
+    color: #4C2C2E;
+    background-color: #E7F2F8;
+    padding: 30px 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+
+.accord .container {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.accord .subject {
+    position: relative;
+    padding: 10px 0;
+    font-size: 26px;
+    color: #4C2C2E;
+    cursor: pointer;
+}
+
+.accord .subject::before {
+    content: '+';
+    color: #4C2C2E;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 26px;
+    transform: translateY(-50%);
+}
+
+.accord .description {
+    position: relative;
+    background: #E7F2F8;
+    height: 0;
+    font-size: 21px;
+    text-align: center;
+    width: 700px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.accord hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid #5B443E;
+}
+
+.accord .container.active .description {
+    height: 150px;
+}
+
+.accord .container.active .subject::before {
+    content: '-';
+    font-size: 30px;
+}
